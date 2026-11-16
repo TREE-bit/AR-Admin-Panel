@@ -1,0 +1,22 @@
+{
+  "name": "@ar/shared",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "module": "index.ts",
+  "license": "MIT",
+  "scripts": {
+    "clean": "pnpm rimraf node_modules && pnpm rimraf dist"
+  },
+  "peerDependencies": {
+    "axios": "^1.5.1",
+    "vue": "^3.3.4",
+    "@vueuse/shared": "^10.4.1",
+    "vue-router": "^4.2.4"
+  },
+  "dependencies": {
+    "qs": "^6.11.2"
+  },
+  "devDependencies": {
+    "@types/qs": "^6.9.8"
+  }
+}

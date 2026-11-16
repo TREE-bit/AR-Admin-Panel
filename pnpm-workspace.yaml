@@ -1,0 +1,10 @@
+packages:
+  - apps/**
+  - '!playgrounds'
+  - 'packages/*'
+  - 'scripts/**'
+allowBuilds:
+  core-js: true
+  esbuild: true
+  vue-demi: true
+  vue-echarts: true

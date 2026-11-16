@@ -1,0 +1,658 @@
+[
+  {
+    "path": "/dashboard/analysis",
+    "title": "m1"
+  },
+  {
+    "path": "/admin/log/index",
+    "title": "m20"
+  },
+  {
+    "path": "/admin/user/index",
+    "title": "m22"
+  },
+  {
+    "path": "/admin/menu/index",
+    "title": "m23"
+  },
+  {
+    "path": "/admin/role/index",
+    "title": "m24"
+  },
+  {
+    "path": "/admin/white/index",
+    "title": "m21"
+  },
+  {
+    "path": "/admin/black/index",
+    "title": "m466"
+  },
+  {
+    "path": "/admin/sysLoginlog",
+    "title": "m943"
+  },
+  {
+    "path": "/admin/merchantInfo/index",
+    "title": "m29"
+  },
+  {
+    "path": "/merchant/application",
+    "title": "m27"
+  },
+  {
+    "path": "/merchant/record",
+    "title": "m26"
+  },
+  {
+    "path": "/merchant/changes",
+    "title": "m28"
+  },
+  {
+    "path": "/merchant/recharge",
+    "title": "m57"
+  },
+  {
+    "path": "/merchant/withdraw",
+    "title": "m58"
+  },
+  {
+    "path": "/config/setting/index",
+    "title": "m31"
+  },
+  {
+    "path": "/config/usdt/index",
+    "title": "m32"
+  },
+  {
+    "path": "/config/rechargeCancel/index",
+    "title": "m33"
+  },
+  {
+    "path": "/config/withdrawCancel/index",
+    "title": "m34"
+  },
+  {
+    "path": "/config/contentconfig/index",
+    "title": "m211"
+  },
+  {
+    "path": "/config/operations",
+    "title": "m316"
+  },
+  {
+    "path": "/config/taskManagement",
+    "title": "m317"
+  },
+  {
+    "path": "/config/switches",
+    "title": "m412"
+  },
+  {
+    "path": "/config/alertparams",
+    "title": "m457"
+  },
+  {
+    "path": "/config/selectLivechat",
+    "title": "m545"
+  },
+  {
+    "path": "/config/nativeConfig",
+    "title": "m553"
+  },
+  {
+    "path": "/config/bankList",
+    "title": "m648"
+  },
+  {
+    "path": "/config/imChat",
+    "title": "m783"
+  },
+  {
+    "path": "/config/tradeReward",
+    "title": "n412"
+  },
+  {
+    "path": "/config/exportList",
+    "title": "n546"
+  },
+  {
+    "path": "/config/proxyPort",
+    "title": "n574"
+  },
+  {
+    "path": "/config/eventManager",
+    "title": "n670"
+  },
+  {
+    "path": "/config/telegramManage",
+    "title": "n800"
+  },
+  {
+    "path": "/config/getRewardsRecord",
+    "title": "n1094"
+  },
+  {
+    "path": "/config/autoAppNativeConfig",
+    "title": "n1497"
+  },
+  {
+    "path": "/config/domainManager",
+    "title": "n1727"
+  },
+  {
+    "path": "/config/testEditor",
+    "title": "富文本测试"
+  },
+  {
+    "path": "/order/usdtBuyOrder/index",
+    "title": "m9"
+  },
+  {
+    "path": "/order/arrearsOrder",
+    "title": "n202"
+  },
+  {
+    "path": "/order/sellOut/index",
+    "title": "sellOutTitle"
+  },
+  {
+    "path": "/order/matchingPool/index",
+    "title": "m10"
+  },
+  {
+    "path": "/order/buyOrder/index",
+    "title": "m7"
+  },
+  {
+    "path": "/order/sale/index",
+    "title": "m5"
+  },
+  {
+    "path": "/order/appeal/index",
+    "title": "m4"
+  },
+  {
+    "path": "/order/assemble/index",
+    "title": "m11"
+  },
+  {
+    "path": "/order/refundOrder",
+    "title": "m637"
+  },
+  {
+    "path": "/order/kycRecords",
+    "title": "m690"
+  },
+  {
+    "path": "/order/usdtSellOrder",
+    "title": "m895"
+  },
+  {
+    "path": "/mandate/matchingOrderPool",
+    "title": "n224"
+  },
+  {
+    "path": "/mandate/pushAmountRecord",
+    "title": "n284"
+  },
+  {
+    "path": "/mandate/hotBuyRecord",
+    "title": "n351"
+  },
+  {
+    "path": "/mandate/topUpFailure",
+    "title": "n500"
+  },
+  {
+    "path": "/mandate/splitOrder",
+    "title": "n610"
+  },
+  {
+    "path": "/mandate/splitFailOrder",
+    "title": "n611"
+  },
+  {
+    "path": "/report/moonOf",
+    "title": "m13"
+  },
+  {
+    "path": "/report/moonPay",
+    "title": "m14"
+  },
+  {
+    "path": "/report/merchant",
+    "title": "n6"
+  },
+  {
+    "path": "/report/reconciliation",
+    "title": "reportReconciliation"
+  },
+  {
+    "path": "/report/fourReport",
+    "title": "m785"
+  },
+  {
+    "path": "/member/list",
+    "title": "m17"
+  },
+  {
+    "path": "/member/paymentV2",
+    "title": "m18"
+  },
+  {
+    "path": "/member/usdtPayment",
+    "title": "m887"
+  },
+  {
+    "path": "/member/changeReocde",
+    "title": "m35"
+  },
+  {
+    "path": "/member/agentLevel",
+    "title": "n544"
+  },
+  {
+    "path": "/member/agentLevReo",
+    "title": "m861"
+  },
+  {
+    "path": "/member/name",
+    "title": "c17"
+  },
+  {
+    "path": "/member/group",
+    "title": "m16"
+  },
+  {
+    "path": "/member/smslog",
+    "title": "m178"
+  },
+  {
+    "path": "/member/operationlog",
+    "title": "m179"
+  },
+  {
+    "path": "/member/loginlog",
+    "title": "m180"
+  },
+  {
+    "path": "/member/manuallog",
+    "title": "m227"
+  },
+  {
+    "path": "/member/unbindLog",
+    "title": "n220"
+  },
+  {
+    "path": "/task/detail",
+    "title": "m318"
+  },
+  {
+    "path": "/wind/memberBlacklist",
+    "title": "m453"
+  },
+  {
+    "path": "/wind/riskControlUser",
+    "title": "n294"
+  },
+  {
+    "path": "/wind/riskUpiControlLog",
+    "title": "n1128"
+  },
+  {
+    "path": "/wind/riskUpiUnbanLog",
+    "title": "n1129"
+  },
+  {
+    "path": "/wind/abnDisconnectLogs",
+    "title": "n1340"
+  },
+  {
+    "path": "/wind/bankCardBlack",
+    "title": "n1538"
+  },
+  {
+    "path": "/wind/autoSellEnableLog",
+    "title": "n1999"
+  },
+  {
+    "path": "/userlevel/levelConfig",
+    "title": "m494"
+  },
+  {
+    "path": "/userlevel/levelLog",
+    "title": "m495"
+  },
+  {
+    "path": "/userlevel/creditConfig",
+    "title": "m492"
+  },
+  {
+    "path": "/userlevel/creditLog",
+    "title": "m493"
+  },
+  {
+    "path": "/userlevel/welfareConfig",
+    "title": "m496"
+  },
+  {
+    "path": "/kyc/kycBank",
+    "title": "n1369"
+  },
+  {
+    "path": "/kyc/kycManagerV2",
+    "title": "m576"
+  },
+  {
+    "path": "/kyc/kycWaitRec",
+    "title": "m808"
+  },
+  {
+    "path": "/kyc/kycSellAppealWait",
+    "title": "m977"
+  },
+  {
+    "path": "/kyc/sellTransRes",
+    "title": "m690"
+  },
+  {
+    "path": "/kyc/kycWaitRecBuy",
+    "title": "m949"
+  },
+  {
+    "path": "/kyc/kycBuyAppealRec",
+    "title": "m951"
+  },
+  {
+    "path": "/kyc/autoTransRes",
+    "title": "n1501"
+  },
+  {
+    "path": "/kyc/quickWithdrawal",
+    "title": "n633"
+  },
+  {
+    "path": "/kyc/kycCollectionPending",
+    "title": "n1273"
+  },
+  {
+    "path": "/kyc/externalChannellCollection",
+    "title": "n1272"
+  },
+  {
+    "path": "/kyc/externalChanellList",
+    "title": "n1274"
+  },
+  {
+    "path": "/kyc/kycReversal",
+    "title": "n1534"
+  },
+  {
+    "path": "/kyc/kycBuyAppealFailedRec",
+    "title": "n292"
+  },
+  {
+    "path": "/kyc/kycTransAbn",
+    "title": "n1253"
+  },
+  {
+    "path": "/kyc/kycFaildRecords",
+    "title": "n291"
+  },
+  {
+    "path": "/kyc/externalChannelException",
+    "title": "n1275"
+  },
+  {
+    "path": "/kyc/kycBuySuccessRecord",
+    "title": "n1449"
+  },
+  {
+    "path": "/kyc/kycMoreOrder",
+    "title": "n1289"
+  },
+  {
+    "path": "/kyc/kycToken",
+    "title": "m825"
+  },
+  {
+    "path": "/kyc/kycOrder",
+    "title": "m607"
+  },
+  {
+    "path": "/kyc/kycSmsLog",
+    "title": "n795"
+  },
+  {
+    "path": "/kyc/kycTrading",
+    "title": "n797"
+  },
+  {
+    "path": "/kyc/kycSmsSuccessLog",
+    "title": "KYC短信发送成功日志"
+  },
+  {
+    "path": "/appConfig/appManager",
+    "title": "n1524"
+  },
+  {
+    "path": "/appConfig/appDataCollection",
+    "title": "n1588"
+  },
+  {
+    "path": "/appConfig/fackAppBank",
+    "title": "n1682"
+  },
+  {
+    "path": "/appConfig/fackAppBlacklist",
+    "title": "n1697"
+  },
+  {
+    "path": "/appConfig/fackAppLoginFailure",
+    "title": "n1714"
+  },
+  {
+    "path": "/payment/manager",
+    "title": "m710"
+  },
+  {
+    "path": "/payment/channelManager",
+    "title": "m671"
+  },
+  {
+    "path": "/payment/channelChanges",
+    "title": "n859"
+  },
+  {
+    "path": "/payment/channelCollection",
+    "title": "n860"
+  },
+  {
+    "path": "/emailManager/emailTemp",
+    "title": "m962"
+  },
+  {
+    "path": "/emailManager/appPushTemp",
+    "title": "n173"
+  },
+  {
+    "path": "/emailManager/emailGroup",
+    "title": "m962"
+  },
+  {
+    "path": "/emailManager/emailSenderMgmt",
+    "title": "n120"
+  },
+  {
+    "path": "/emailManager/pushTemp",
+    "title": "n188"
+  },
+  {
+    "path": "/emailManager/pushMgmt",
+    "title": "n196"
+  },
+  {
+    "path": "/emailManager/appPushChangmt",
+    "title": "n210"
+  },
+  {
+    "path": "/biScreen/dataScreen",
+    "title": "n171"
+  },
+  {
+    "path": "/biScreen/dataOverview",
+    "title": "n172"
+  },
+  {
+    "path": "/biScreen/dataRecReport",
+    "title": "reportReconciliation"
+  },
+  {
+    "path": "/biScreen/dataMearchantReport",
+    "title": "n6"
+  },
+  {
+    "path": "/biScreen/dataBuyReport",
+    "title": "m13"
+  },
+  {
+    "path": "/biScreen/dataSellReport",
+    "title": "m14"
+  },
+  {
+    "path": "/biScreen/dataVisualization",
+    "title": "n177"
+  },
+  {
+    "path": "/biScreen/matchingData",
+    "title": "n293"
+  },
+  {
+    "path": "/biScreen/dataToupOverview",
+    "title": "n335"
+  },
+  {
+    "path": "/biScreen/dataFinancial",
+    "title": "n428"
+  },
+  {
+    "path": "/biScreen/dataMember",
+    "title": "n571"
+  },
+  {
+    "path": "/biScreen/dataFundFlows",
+    "title": "n632"
+  },
+  {
+    "path": "/biScreen/dataIdxCompResult",
+    "title": "n786"
+  },
+  {
+    "path": "/biScreen/dataKycTransStats",
+    "title": "n830"
+  },
+  {
+    "path": "/biScreen/dataAntMember",
+    "title": "n893"
+  },
+  {
+    "path": "/biScreen/dataSmsLog",
+    "title": "n847"
+  },
+  {
+    "path": "/biScreen/dataSendSmsCount",
+    "title": "n846"
+  },
+  {
+    "path": "/biScreen/dataSmsVerifyLog",
+    "title": "n2018"
+  },
+  {
+    "path": "/biScreen/dataBankData",
+    "title": "银行接口数据分析"
+  },
+  {
+    "path": "/biScreen/dataAppealOrder",
+    "title": "n1198"
+  },
+  {
+    "path": "/biScreen/dataArrearsBoard",
+    "title": "n1311"
+  },
+  {
+    "path": "/biScreen/dataAssemble",
+    "title": "n1362"
+  },
+  {
+    "path": "/biScreen/dataBuyUsdt",
+    "title": "n1472"
+  },
+  {
+    "path": "/biScreen/dataBusinessDatabas",
+    "title": "n1473"
+  },
+  {
+    "path": "/biScreen/dataRegAndLogin",
+    "title": "n1495"
+  },
+  {
+    "path": "/biScreen/dataMerchantBalance",
+    "title": "n1529"
+  },
+  {
+    "path": "/biScreen/dataNewCustomer",
+    "title": "n1544"
+  },
+  {
+    "path": "/biScreen/dataAntMemberReward",
+    "title": "n1567"
+  },
+  {
+    "path": "/biScreen/dataPriviegeEsc",
+    "title": "n1568"
+  },
+  {
+    "path": "/biScreen/dataTradingBusiness",
+    "title": "n1590"
+  },
+  {
+    "path": "/biScreen/dataMemberLoginLog",
+    "title": "m180"
+  },
+  {
+    "path": "/biScreen/dataMemberTrading",
+    "title": "n1634"
+  },
+  {
+    "path": "/biScreen/dataBusinessRealTime",
+    "title": "n1645"
+  },
+  {
+    "path": "/biScreen/dataFakeAppBuyAnalysis",
+    "title": "n1722"
+  },
+  {
+    "path": "/biScreen/dataTrackingAnalytics",
+    "title": "n1779"
+  },
+  {
+    "path": "/biScreen/dataUsdtBuyOrder",
+    "title": "n1782"
+  },
+  {
+    "path": "/biScreen/dataFackAppSellAppeal",
+    "title": "n1789"
+  },
+  {
+    "path": "/ticket/ticketList",
+    "title": "n831"
+  },
+  {
+    "path": "/ticket/ticketConfig",
+    "title": "n832"
+  },
+  {
+    "path": "/fieldNotes/doc",
+    "title": "字段理解文档"
+  }
+]

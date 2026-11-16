@@ -1,0 +1,12 @@
+node_modules
+dist
+.idea
+.vscode
+*.zip
+apps/admin/components.d.ts
+.DS_Store
+
+# 真实环境接口与密钥不进公开源码库；原型空配置可提交
+apps/admin/.env.*
+!apps/admin/.env.prototype
+demo-dist/
