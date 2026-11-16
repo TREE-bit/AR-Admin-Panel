@@ -465,6 +465,14 @@
 - 订单金额、实欠金额用小数；UTR、操作人、操作时间、KYC 是/否、订单来源都按页面字段填。
 - `totalMemberDebt` 返回待扣取总欠费、欠费中用户数，按列表假数据汇总。页面代码没动。
 
+## 会话二十七：源码库与 Demo 公网发布
+
+- 源码库（公开）：https://github.com/TREE-bit/AR-Admin-Panel
+- Demo 静态库（无源码，供 GitHub Pages）：https://github.com/TREE-bit/AR-Admin-Panel-Demo
+- 构建命令：`pnpm --filter admin build:prototype:pages`（`base=/AR-Admin-Panel-Demo/`）
+- 真实环境 `.env.*` 未进公开源码库，仅提交空的 `.env.prototype`
+- Pages 需在 Demo 仓库 Settings → Pages 选 `main` / `/ (root)` 后生效；预计地址 https://tree-bit.github.io/AR-Admin-Panel-Demo/
+
 ## 还没做
 
 - 导航剩余名称：订单管理页内顺序和名字已按测试环境对过。其他栏目的页内名称，以及测试环境没展开的子菜单，还没对。
@@ -472,3 +480,4 @@
 - 退款场景、欠费扣费完整链路，净买卖的正式公式。
 - 创建会员、批量禁用会员这些操作仍只返回成功，不会留下新数据。批量禁用或启用买入、卖出会改内存里的开关和账号状态。
 - 账变跳转撮合页、导出真实文件内容。
+- Demo 仓库的 GitHub Pages 开关需在网页上手动打开（本机无 `gh`）。
