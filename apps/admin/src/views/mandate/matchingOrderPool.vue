@@ -151,7 +151,7 @@
         <span v-else>-</span>
       </template>
       <template v-if="column.key === 'sourceOrderType'">
-        <span v-if="record.sourceOrderType">{{ $t($getMapItem(orderSourceMap,record.sourceOrderType)) }}</span>
+        <span v-if="record.sourceOrderType === 0 || record.sourceOrderType">{{ $t($getMapItem(orderSourceMap,record.sourceOrderType)) }}</span>
         <span v-else>{{ $t('n623') }}</span>
       </template>
       <template v-if="column.key === 'isKycOrder'">

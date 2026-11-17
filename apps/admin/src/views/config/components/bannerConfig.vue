@@ -17,7 +17,7 @@
           {{ checkedTypeMap1[record.bannerType] }}
         </template>
         <template v-if="column.key === 'bannerImageUrl'"  >
-          <a-image style="max-width: 160px;max-width: 120px;" :src="record.bannerImageUrl" />
+          <a-image :width="160" :src="record.bannerImageUrl" />
         </template>
         <template v-if="column.key === 'status'"  >
         {{ checkedTypeMap[record.status] }}
@@ -173,14 +173,14 @@ const { getTabH } = useTabHeight();
       title: t('m228'),
       dataIndex: "bannerType",
       key: "bannerType",
+      width: 140,
       align:"center"
     },
     {
       title: t('m229'),
       dataIndex: "bannerImageUrl",
       key: "bannerImageUrl",
-      ellipsis: true,
-      width:300,
+      width: 200,
       align:"center",
     },
     {

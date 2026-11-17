@@ -634,16 +634,16 @@
           v-model:value="merchantForm.randomAmountMin"
           :min="merchantForm.minCost || 0"
           @blur="fixToStep(merchantForm, 'randomAmountMin')"
-          :disabled="merchantForm.supportRandomAmount == 0 || !merchantForm.maxCost"
+          :disabled="merchantForm.supportRandomAmount != 1"
         />
       </a-form-item>
       <a-form-item :label="$t('n1314')" name="randomAmountMax" :required="merchantForm.supportRandomAmount == 1">
         <a-input-number
           v-model:value="merchantForm.randomAmountMax"
           :min="merchantForm.randomAmountMin || 0"
-          :max="merchantForm.maxCost || 0"
+          :max="Number(merchantForm.maxCost) > 0 ? merchantForm.maxCost : undefined"
           @blur="fixToStep(merchantForm, 'randomAmountMax')"
-          :disabled="merchantForm.supportRandomAmount == 0 || !merchantForm.maxCost"
+          :disabled="merchantForm.supportRandomAmount != 1"
         />
       </a-form-item>
       <a-form-item v-if="isEdit" :label="$t('n648')" name="status">
@@ -1340,8 +1340,8 @@ const addWhite = () => {
 };
 const isEdit = ref(false);
 const showEditPageFun = async (data: any) => {
-  await getList();
   selectedRow();
+  await getList();
   let values;
   // if(!data.quickAmount || data.quickAmount.length<=9){
   //   fastMoney.value = {

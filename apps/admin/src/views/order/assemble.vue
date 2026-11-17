@@ -510,6 +510,7 @@
           }))
         "
         v-model:value="query.status"
+        @change="search"
       >
         <a-checkbox value="key">{{ $t("value") }}</a-checkbox>
       </a-checkbox-group>

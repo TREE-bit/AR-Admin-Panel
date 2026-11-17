@@ -31,7 +31,7 @@
         <span v-else>-</span>
       </template>
       <template v-if="column.key === 'imageUrl'">
-        <a-image v-if="record.imageUrl" style="max-width: 160px;max-height: 120px;" :src="record.imageUrl" />
+        <a-image v-if="record.imageUrl" :width="160" :src="record.imageUrl" />
         <span v-else>-</span>
       </template>
       <template v-if="column.key === 'operator'">

@@ -4,6 +4,18 @@
     "title": "m1"
   },
   {
+    "path": "/admin/white/index",
+    "title": "m21"
+  },
+  {
+    "path": "/admin/sysLoginlog",
+    "title": "m943"
+  },
+  {
+    "path": "/admin/black/index",
+    "title": "m466"
+  },
+  {
     "path": "/admin/log/index",
     "title": "m20"
   },
@@ -12,24 +24,12 @@
     "title": "m22"
   },
   {
-    "path": "/admin/menu/index",
-    "title": "m23"
-  },
-  {
     "path": "/admin/role/index",
     "title": "m24"
   },
   {
-    "path": "/admin/white/index",
-    "title": "m21"
-  },
-  {
-    "path": "/admin/black/index",
-    "title": "m466"
-  },
-  {
-    "path": "/admin/sysLoginlog",
-    "title": "m943"
+    "path": "/admin/menu/index",
+    "title": "m23"
   },
   {
     "path": "/admin/merchantInfo/index",
@@ -56,24 +56,24 @@
     "title": "m58"
   },
   {
-    "path": "/config/setting/index",
-    "title": "m31"
-  },
-  {
-    "path": "/config/usdt/index",
-    "title": "m32"
-  },
-  {
-    "path": "/config/rechargeCancel/index",
-    "title": "m33"
-  },
-  {
-    "path": "/config/withdrawCancel/index",
-    "title": "m34"
-  },
-  {
     "path": "/config/contentconfig/index",
     "title": "m211"
+  },
+  {
+    "path": "/config/selectLivechat",
+    "title": "m545"
+  },
+  {
+    "path": "/config/tradeReward",
+    "title": "n412"
+  },
+  {
+    "path": "/config/exportList",
+    "title": "n546"
+  },
+  {
+    "path": "/config/domainManager",
+    "title": "n1727"
   },
   {
     "path": "/config/operations",
@@ -88,56 +88,52 @@
     "title": "m412"
   },
   {
-    "path": "/config/alertparams",
-    "title": "m457"
+    "path": "/config/eventManager",
+    "title": "n670"
   },
   {
-    "path": "/config/selectLivechat",
-    "title": "m545"
+    "path": "/config/setting/index",
+    "title": "m315"
   },
   {
-    "path": "/config/nativeConfig",
-    "title": "m553"
+    "path": "/config/usdt/index",
+    "title": "m32"
   },
   {
-    "path": "/config/bankList",
-    "title": "m648"
+    "path": "/task/detail",
+    "title": "m318"
   },
   {
     "path": "/config/imChat",
     "title": "m783"
   },
   {
-    "path": "/config/tradeReward",
-    "title": "n412"
-  },
-  {
-    "path": "/config/exportList",
-    "title": "n546"
-  },
-  {
-    "path": "/config/proxyPort",
-    "title": "n574"
-  },
-  {
-    "path": "/config/eventManager",
-    "title": "n670"
+    "path": "/config/alertparams",
+    "title": "m457"
   },
   {
     "path": "/config/telegramManage",
     "title": "n800"
   },
   {
-    "path": "/config/getRewardsRecord",
-    "title": "n1094"
+    "path": "/config/nativeConfig",
+    "title": "m553"
   },
   {
     "path": "/config/autoAppNativeConfig",
     "title": "n1497"
   },
   {
-    "path": "/config/domainManager",
-    "title": "n1727"
+    "path": "/config/getRewardsRecord",
+    "title": "n1094"
+  },
+  {
+    "path": "/config/bankList",
+    "title": "m648"
+  },
+  {
+    "path": "/config/proxyPort",
+    "title": "n574"
   },
   {
     "path": "/config/testEditor",
@@ -178,10 +174,6 @@
   {
     "path": "/order/refundOrder",
     "title": "m637"
-  },
-  {
-    "path": "/order/kycRecords",
-    "title": "m690"
   },
   {
     "path": "/order/usdtSellOrder",
@@ -240,10 +232,6 @@
     "title": "m18"
   },
   {
-    "path": "/member/usdtPayment",
-    "title": "m887"
-  },
-  {
     "path": "/member/changeReocde",
     "title": "m35"
   },
@@ -264,18 +252,6 @@
     "title": "m16"
   },
   {
-    "path": "/member/smslog",
-    "title": "m178"
-  },
-  {
-    "path": "/member/operationlog",
-    "title": "m179"
-  },
-  {
-    "path": "/member/loginlog",
-    "title": "m180"
-  },
-  {
     "path": "/member/manuallog",
     "title": "m227"
   },
@@ -284,8 +260,20 @@
     "title": "n220"
   },
   {
-    "path": "/task/detail",
-    "title": "m318"
+    "path": "/member/operationlog",
+    "title": "m179"
+  },
+  {
+    "path": "/member/smslog",
+    "title": "m178"
+  },
+  {
+    "path": "/member/loginlog",
+    "title": "m180"
+  },
+  {
+    "path": "/member/usdtPayment",
+    "title": "m887"
   },
   {
     "path": "/wind/memberBlacklist",
@@ -324,16 +312,16 @@
     "title": "m495"
   },
   {
+    "path": "/userlevel/welfareConfig",
+    "title": "m496"
+  },
+  {
     "path": "/userlevel/creditConfig",
     "title": "m492"
   },
   {
     "path": "/userlevel/creditLog",
     "title": "m493"
-  },
-  {
-    "path": "/userlevel/welfareConfig",
-    "title": "m496"
   },
   {
     "path": "/kyc/kycBank",
@@ -468,6 +456,22 @@
     "title": "n860"
   },
   {
+    "path": "/emailManager/emailSenderMgmt",
+    "title": "n120"
+  },
+  {
+    "path": "/emailManager/pushMgmt",
+    "title": "n196"
+  },
+  {
+    "path": "/emailManager/pushTemp",
+    "title": "n188"
+  },
+  {
+    "path": "/emailManager/appPushChangmt",
+    "title": "n210"
+  },
+  {
     "path": "/emailManager/emailTemp",
     "title": "m962"
   },
@@ -478,22 +482,6 @@
   {
     "path": "/emailManager/emailGroup",
     "title": "m962"
-  },
-  {
-    "path": "/emailManager/emailSenderMgmt",
-    "title": "n120"
-  },
-  {
-    "path": "/emailManager/pushTemp",
-    "title": "n188"
-  },
-  {
-    "path": "/emailManager/pushMgmt",
-    "title": "n196"
-  },
-  {
-    "path": "/emailManager/appPushChangmt",
-    "title": "n210"
   },
   {
     "path": "/biScreen/dataScreen",

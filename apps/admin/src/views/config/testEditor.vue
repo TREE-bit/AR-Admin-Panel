@@ -1,5 +1,5 @@
 <template>
-<h1>富文本测试</h1>
+<h1>{{ $getMenuName() }}</h1>
   <div class="testEditor">
     <Aieditor  :announcement-content="content" @change="change"/>
   </div>

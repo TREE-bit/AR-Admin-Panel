@@ -723,6 +723,7 @@ const onFinishFailed = (errorInfo: any) => {
     // console.log("Failed:", errorInfo);
 };
 const closeEdit = () => {
+    isUpload.value = false;
     showContent.value = false;
     isMountUpload.value = false;
     stepOne.value = true;
@@ -773,6 +774,7 @@ const handleCancel = () => {
     resetAdd();
 }
 const showEditPage= () => {
+    isUpload.value = false;
     resetAdd();
     getEventStatus();
     isMountUpload.value = true;
@@ -783,6 +785,7 @@ const showEditPage= () => {
     isChangeNum.value = 3;
 };
 const showEditPageFun = async (data: any) => {
+    isUpload.value = false;
     selectedRow();
     const { id } = data;
     addFrom.value.id = id;

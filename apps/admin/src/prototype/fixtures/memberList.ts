@@ -950,3 +950,62 @@ export function applyDeleteGroup(raw: unknown) {
   memberGroups.splice(index, 1)
   return successBody
 }
+
+const MERCHANT_NAME: Record<string, string> = {
+  M10021: '星河商城',
+  M10058: '快付钱包',
+  M10073: '北境博彩',
+  M10001: '内部测试商户',
+}
+
+function merchantCodeOf(shown: unknown) {
+  const text = String(shown ?? '')
+  const found = Object.entries(MERCHANT_NAME).find(([, name]) => name === text)
+  return found ? found[0] : text
+}
+
+export function buildActiveMerchantBody(raw: unknown) {
+  const query = readQuery(raw)
+  const member = findMemberById(query.memberId)
+  const binds = member?.bindMerchantInfoDTOS || []
+  const rows = binds.map((item, index) => {
+    const name = MERCHANT_NAME[item.merchantCode] || item.merchantCode
+    const ipBase = member?.merchantMemberIp || `112.${(member?.id || 0) % 200}.8.1`
+    const parts = ipBase.split('.')
+    parts[3] = String((Number(parts[3]) + index) % 255)
+    return {
+      // 弹窗「商户名称」列绑的是 merchantCode，这里放商户名，和解绑入参一致。
+      merchantCode: name,
+      sourceMerchant: name === member?.merchantName,
+      activeIp: parts.join('.'),
+      createTime: member ? offsetTime(member.createTime, index * 5) : '',
+    }
+  })
+  const pageNo = Number(query.pageNo) || 1
+  const pageSize = Number(query.pageSize) || 10
+  const start = (pageNo - 1) * pageSize
+  return {
+    code: '1',
+    msg: '操作成功',
+    data: rows.slice(start, start + pageSize),
+    total: rows.length,
+    success: true,
+  }
+}
+
+export function applyUnbindMerchant(raw: unknown) {
+  const query = readQuery(raw)
+  const member = findMemberById(query.memberId)
+  if (!member) return { code: '0', msg: '会员不存在', data: null, success: false }
+  const code = merchantCodeOf(query.merchantCode)
+  const index = member.bindMerchantInfoDTOS.findIndex((item) => item.merchantCode === code)
+  if (index < 0) return { code: '0', msg: '商户不存在', data: null, success: false }
+  const name = MERCHANT_NAME[member.bindMerchantInfoDTOS[index].merchantCode] || code
+  if (name === member.merchantName) {
+    return { code: '0', msg: '来源商户不能解绑', data: null, success: false }
+  }
+  member.bindMerchantInfoDTOS.splice(index, 1)
+  member.countOfMerchant = member.bindMerchantInfoDTOS.length
+  member.externalMemberId = member.bindMerchantInfoDTOS[0]?.merchantMemberId || ''
+  return successBody
+}

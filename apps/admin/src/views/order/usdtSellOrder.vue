@@ -1,6 +1,6 @@
 <template>
   <div class="search">
-    <countDown :title="$t('m895')" @zero="getList()" />
+    <countDown :title="$getMenuName()" @zero="getList()" />
     <a-row>
       <a-col :span="3">
         <a-input v-trim

@@ -1,6 +1,6 @@
 <template>
     <div class="search">
-      <h2>{{ $t("m637") }}</h2>
+      <h2>{{ $getMenuName() }}</h2>
       <a-row>
         <a-col :span="3">
           <a-input v-trim

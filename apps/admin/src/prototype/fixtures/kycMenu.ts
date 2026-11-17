@@ -179,6 +179,11 @@ function upiOf(index: number) {
   return `${person.phone}${bankAt(index).upiSuffix}`
 }
 
+/** 申诉详情流水按这个 UPI 对收款人，和会员 KYC 第一条一致。 */
+export function prototypeFlowUpi() {
+  return upiOf(0)
+}
+
 function utrOf(index: number) {
   return String(410000000000 + index * 17)
 }
@@ -390,9 +395,26 @@ function waterRow(base: number, index: number, extra: Row = {}): Row {
   }
 }
 
+function appealFlowRows(base: number) {
+  return [0, 1, 2].map((index) =>
+    waterRow(base, index, {
+      recipient: upiOf(0),
+      payer: 'rahul@oksbi',
+      amount: 1600 + index * 100,
+      utr: `49876543210${index}`,
+      createTime: stamp(9, 20 + index * 15, 0, 0),
+      bankTransactionTime: stamp(9, 20 + index * 15, 0, 0),
+      isMatch: index % 4,
+    }),
+  )
+}
+
 function seedBuyAppeal() {
   if (buyAppeal) return buyAppeal
-  buyAppeal = Array.from({ length: 10 }, (_, index) => waterRow(89001, index))
+  buyAppeal = [
+    ...Array.from({ length: 10 }, (_, index) => waterRow(89001, index)),
+    ...appealFlowRows(89050),
+  ]
   return buyAppeal
 }
 
@@ -426,7 +448,10 @@ function seedSellFailed() {
 
 function seedSellRecords() {
   if (sellRecords) return sellRecords
-  sellRecords = Array.from({ length: 10 }, (_, index) => waterRow(89401, index))
+  sellRecords = [
+    ...Array.from({ length: 10 }, (_, index) => waterRow(89401, index)),
+    ...appealFlowRows(89450),
+  ]
   return sellRecords
 }
 
@@ -567,7 +592,8 @@ function seedFlowAbn() {
         appealStatus: (index % 3) + 1,
         buyOrderType: (index % 7) + 1,
         buyOrderNo: `ABNB${90301 + index}`,
-        chOrderStatus: [3, 4, 6, 7, 9, 15][index % 6],
+        // 必须落在 matchlistStatus 的键上。9 不在映射里，$t(undefined) 会把页面画挂，之后切不走。
+        chOrderStatus: [3, 4, 6, 7, 8, 15, 5, 12][index % 8],
         chOrderNo: `ABNC${90301 + index}`,
         sellOrderNo: `ABNS${90301 + index}`,
       },

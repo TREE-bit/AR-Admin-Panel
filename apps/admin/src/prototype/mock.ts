@@ -4,7 +4,9 @@ import {
   applyCreateGroup,
   applyDeleteGroup,
   applyMemberTradeStatus,
+  applyUnbindMerchant,
   applyUpdateGroup,
+  buildActiveMerchantBody,
   buildGroupAuthListBody,
   buildMemberGroupBody,
   buildMemberListBody,
@@ -84,7 +86,11 @@ import {
   buildMemberAppListBody,
 } from './fixtures/appConfig'
 import { resolveKycMenu } from './fixtures/kycMenu'
+import { resolveMerchantMenu } from './fixtures/merchantMenu'
+import { resolveChannelMenu } from './fixtures/channelMenu'
+import { resolveTicketMenu } from './fixtures/ticketMenu'
 import { resolveRemaining } from './fixtures/remainingPages'
+import { resolveConfigOps } from './fixtures/configOps'
 
 const emptyExtend = {
   nextColValue: '',
@@ -121,6 +127,8 @@ function resolvePrototypeBody(config: InternalAxiosRequestConfig) {
   if (url.includes('/memberGroupAdmin/create')) return applyCreateGroup(config.data)
   if (url.includes('/memberGroupAdmin/update')) return applyUpdateGroup(config.data)
   if (url.includes('/memberGroupAdmin/delete')) return applyDeleteGroup(config.data)
+  if (url.includes('/memberInfoAdmin/activeMerchantListPage')) return buildActiveMerchantBody(config.data)
+  if (url.includes('/memberInfoAdmin/unbindingMerchant')) return applyUnbindMerchant(config.data)
   if (url.includes('/memberInfoAdmin/buyStatusChange')) return applyMemberTradeStatus(config.data, 'buy')
   if (url.includes('/memberInfoAdmin/sellStatusChange')) return applyMemberTradeStatus(config.data, 'sell')
   if (url.includes('/memberInfoAdmin/disableBuyBatch')) return applyMemberTradeStatus(config.data, 'buy', false)
@@ -244,6 +252,14 @@ function resolvePrototypeBody(config: InternalAxiosRequestConfig) {
   if ((config.method || 'get').toLowerCase() === 'delete' && url.includes('/usdtReceiveInfo/')) {
     return applyDeleteUsdt(url)
   }
+  const configOpsBody = resolveConfigOps(url, config.data, config.method || 'post')
+  if (configOpsBody) return configOpsBody
+  const merchantBody = resolveMerchantMenu(url, config.data)
+  if (merchantBody) return merchantBody
+  const channelBody = resolveChannelMenu(url, config.data)
+  if (channelBody) return channelBody
+  const ticketBody = resolveTicketMenu(url, config.data)
+  if (ticketBody) return ticketBody
   const remainingBody = resolveRemaining(url, config.data)
   if (remainingBody) return remainingBody
   return createPrototypeBody()

@@ -30,7 +30,7 @@
         </div>
       </template>
       <template v-if="column.key === 'eventBanner'">
-        <a-image :src="record.eventBanner" />
+        <a-image :width="160" :src="record.eventBanner" />
       </template>
       <template v-if="column.key === 'content'">
         <div class="limit-content" v-html="record.content"></div>

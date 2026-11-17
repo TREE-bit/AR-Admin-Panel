@@ -95,6 +95,9 @@
       <template v-if="column.key === 'merchantUp'">
         {{ thousand(record.merchantUp) }}
       </template>
+      <template v-if="column.key === 'merchantDownPoint'">
+        {{ thousand(record.merchantDownPoint) }}
+      </template>
       <template v-if="column.key === 'merchantDown'">
         {{ thousand(record.merchantDown) }}
       </template>

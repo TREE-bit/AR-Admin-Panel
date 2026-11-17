@@ -1,7 +1,7 @@
 <template>
   <div class="search">
     <!-- <countDown :title="$t('n546')" @zero="getList()" :defaultTime="2" /> -->
-     <h2>{{ $t('n574') }}</h2>
+     <h2>{{ $getMenuName() }}</h2>
     <a-row>
       <a-col :span="3">
         <a-input v-trim

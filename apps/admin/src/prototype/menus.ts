@@ -10,6 +10,24 @@ const PENDING_CHECK_PATHS = new Set([
   '/kyc/kycSmsSuccessLog',
 ])
 
+/** 侧栏和页面标题前加【*】 */
+const STAR_MARK_PATHS = new Set([
+  '/member/operationlog',
+  '/member/smslog',
+  '/member/loginlog',
+  '/member/usdtPayment',
+  '/order/refundOrder',
+  '/order/usdtSellOrder',
+  '/config/bankList',
+  '/config/proxyPort',
+  '/config/testEditor',
+  '/emailManager/emailTemp',
+  '/emailManager/appPushTemp',
+  '/emailManager/emailGroup',
+  '/userlevel/creditConfig',
+  '/userlevel/creditLog',
+])
+
 const GROUP_NAMES: Record<string, string> = {
   fieldNotes: '后台字段理解',
   dashboard: 'm1',
@@ -34,7 +52,7 @@ const GROUP_NAMES: Record<string, string> = {
 
 // 侧栏分组顺序。MenuItem 按 sort 从小到大排，所以越靠前 sort 越小。
 // dashboard 弃用，不进侧栏。
-// 前 14 个业务栏目对齐测试环境。后台字段理解放最前。工单、报表、任务排在后面。
+// 顺序：后台字段理解仍在最前。其后按测试环境：BI看板、订单管理、KYC管理、APP管理、会员管理、通道管理、委托管理、运营管理、推送管理、商户管理、用户等级、风控管理、系统管理。客服系统在运营管理里面。工单列表、报表中心排在后面。
 const GROUP_ORDER = [
   'fieldNotes',
   'biScreen',
@@ -58,7 +76,8 @@ const GROUP_ORDER = [
 
 /** 路径第一段和侧栏栏目不一致时，按这里归组。页面路由本身不改。 */
 const PAGE_GROUP: Record<string, string> = {
-  '/config/selectLivechat': 'livechat',
+  '/task/detail': 'config',
+  '/admin/merchantInfo/index': 'merchant',
 }
 
 const HIDDEN_GROUPS = new Set(['dashboard'])
@@ -104,7 +123,9 @@ export function buildPrototypeMenus(): MenuItemSchema[] {
     pages.forEach((page, index) => {
       const title = PENDING_CHECK_PATHS.has(page.path)
         ? `【待检查】${i18n.global.t(page.title)}`
-        : page.title
+        : STAR_MARK_PATHS.has(page.path)
+          ? `【*】${i18n.global.t(page.title)}`
+          : page.title
       menus.push({
         id: pageId++,
         icon: '',

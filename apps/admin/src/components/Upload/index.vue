@@ -30,32 +30,40 @@ const customRequest=async (request:any)=>{
   if(!typeList.includes(file.type)){
     return message.error(' Please upload pictures in png/jpg/jpeg/gif/webp format');
   }
-  let ext='.png';
-  if (file.type=='image/jpeg') {
-    ext='.jpg';
-  }else {
-    ext=file.type.replace('image/','.')
+  emit('startUpload','startUpload');
+  try {
+    let ext='.png';
+    if (file.type=='image/jpeg') {
+      ext='.jpg';
+    }else {
+      ext=file.type.replace('image/','.')
+    }
+    const objectName=file.uid+ext;
+    const {data,code}=await getOssUrl({
+      contentType:file.type,
+      objectName,
+    });
+    if (String(code) !== '1'){
+      return
+    };
+    const signedUrl=data.signedUrl;
+    // 原型没有真实对象存储，预签名地址不能拿去上传，否则完成按钮会一直转圈
+    if (String(signedUrl || '').startsWith('prototype-oss://')) {
+      const preview = (await getBase64(file)) as string;
+      image.value = preview;
+      previewImage.value = preview;
+      return;
+    }
+    const baseUrl = data.baseUrl;
+    await OssUpload({signedUrl,file});
+    image.value=objectName;
+    previewImage.value = baseUrl+objectName;
+  } finally {
+    emit('finishUpload', image.value || 'finish');
   }
-  const objectName=file.uid+ext;
-  const {data,code}=await getOssUrl({
-  contentType:file.type,
-    objectName,
-  });
-  if (code!=1){
-    return
-  };
-  const baseUrl = data.baseUrl;
-  const signedUrl=data.signedUrl;
-  await OssUpload({signedUrl,file});
-  // console.log(objectName,'objectName')
-  image.value=objectName;
-  previewImage.value = baseUrl+objectName;
-  emit('finishUpload',objectName);
 }
 
 watch(fileList,async ()=>{
-  emit('startUpload','startUpload');
-  // console.log(fileList.value)
   if (!fileList.value.length)return;
   const file=fileList.value[0];
   if (!file.url && !file.preview) {
